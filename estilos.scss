@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+$content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+    stretch: stretch,
+    baseline: baseline
+);
+
+@for $i from 1 to 13 {
+    .g#{$i}{
+        grid-area: g#{$i}; 
+    }
+}
+
+.flex{
+    display: flex;
+}
+
+@each $position in start center end between around evenly{
+    .jc-#{$position}{
+    justify-content: map-get($content, $position);
+    }
+}
+
+@each $position in start center end stretch baseline{
+    .ai-#{$position}{
+    align-items: map-get($content, $position);
+    }
+}
+
+@each $position in start center end between around evenly stretch{
+    .ac-#{$position}{
+    align-content: map-get($content, $position);
+    }
+}
+
+.fd-column{
+    flex-direction: column;
+}
+
+.no-wrap{
+    flex-direction: nowrap;
+}
+
