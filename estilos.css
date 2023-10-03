@@ -3,6 +3,43 @@
   padding: 0;
 }
 
+.mi-navbar {
+  background-color: black;
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.mi-navbar ul {
+  padding: 0;
+  display: flex;
+  margin: 0px 50px 0px 0px;
+}
+.mi-navbar ul li {
+  width: 100px;
+  height: 65px;
+  list-style: none;
+}
+.mi-navbar ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hover:hover {
+  color: black;
+  background-color: white;
+}
+
 .g1 {
   grid-area: g1;
 }
@@ -133,6 +170,17 @@
 
 .no-wrap {
   flex-direction: nowrap;
+}
+
+@media (min-width: 640px) {
+  .bootstrap-navbar {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .mi-navbar {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
