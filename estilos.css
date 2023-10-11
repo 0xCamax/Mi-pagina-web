@@ -7,7 +7,7 @@
 .mi-navbar {
   position: absolute;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -217,7 +217,7 @@ video {
 }
 
 .baturi {
-  font-size: 120px;
+  font-size: 10em;
   color: wheat;
   font-weight: bold;
 }
@@ -225,16 +225,11 @@ video {
 .subtitulo {
   display: inline-block;
   position: relative;
-  font-size: 30px;
+  font-size: 3em;
   color: whitesmoke;
 }
 
-.subtitulo:hover {
-  transform: scale(1.1);
-  transition: 0.8s;
-}
-
-button:hover {
+.portada-button:hover {
   background-color: wheat;
   color: black;
   border: 0px;
@@ -242,7 +237,7 @@ button:hover {
   transition: 0.3s;
 }
 
-button {
+.portada-button {
   background-color: rgba(0, 0, 0, 0);
   color: whitesmoke;
   border: 1px solid wheat;
@@ -250,10 +245,8 @@ button {
   padding: 5px 20px 5px 20px;
   margin: 5px;
   border-radius: 15px;
-}
-
-main {
-  height: 100vh;
+  width: 15%;
+  text-wrap: nowrap;
 }
 
 .grid-main {
@@ -262,31 +255,158 @@ main {
 
 .cuerpo {
   background-color: antiquewhite;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  padding-top: 50px;
 }
 
-.tarjeta-grid {
+.tarjeta-left {
   display: grid;
-  grid-template-areas: "g1 g3 g3" "g2 g3 g3";
-  grid-template-columns: 40% 30% 30%;
-  grid-template-rows: 40% 60%;
+  grid-template-areas: "g3 g3 g1 g1" "g3 g3 g2 g2";
+  grid-template-columns: 20% 20% 30% 30%;
+  grid-template-rows: 25% 75%;
   border-radius: 20px;
   margin: 20px;
-  height: 422px;
+  margin-right: 35%;
+  width: 60%;
   background-color: beige;
+  height: 422px;
+  font-size: 32px;
 }
-.tarjeta-grid .g3 {
+.tarjeta-left .g3 {
   background-image: url(Multimedia/malthouse.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.tarjeta-left .g1 {
+  padding: 20px;
+  font-size: 1em;
+}
+.tarjeta-left .g2 {
+  padding: 15px;
+  font-size: 0.6em;
+}
+
+.tarjeta-right {
+  display: grid;
+  grid-template-areas: "g1 g1 g3 g3" "g2 g2 g3 g3";
+  grid-template-columns: 30% 30% 20% 20%;
+  grid-template-rows: 25% 75%;
+  border-radius: 20px;
+  margin: 20px;
+  margin-left: 35%;
+  width: 60%;
+  background-color: beige;
+  height: 422px;
+  font-size: 32px;
+}
+.tarjeta-right .g3 {
+  background-image: url(Multimedia/malthouse.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
-.tarjeta-grid .g1 {
+.tarjeta-right .g1 {
   padding: 20px;
+  font-size: 1em;
 }
-.tarjeta-grid .g2 {
-  padding: 20px;
+.tarjeta-right .g2 {
+  padding: 15px;
+  font-size: 0.6em;
+}
+
+.titulo {
+  margin-top: 80px;
+  padding-top: 40px;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+  width: 80%;
+  border-top: 1px solid brown;
+  border-bottom: 1px solid brown;
+  text-align: center;
+}
+
+.contact-form {
+  margin: 30px;
+  width: 40%;
+  padding: 30px;
+  background-color: rgb(168, 125, 94);
+  border-radius: 15px;
+  box-shadow: -1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.contact-form p {
+  color: white;
+}
+.contact-form label {
+  color: white;
+  margin-left: 5px;
+}
+.contact-form input {
+  border-radius: 5px;
+  border: 0px;
+  padding: 5px;
+  margin: 5px;
+}
+.contact-form button {
+  background-color: wheat;
+  color: black;
+  border: 1px;
+  box-shadow: inset -1px 1px 6px 0px rgba(0, 0, 0, 0.9);
+  padding: 5px 0px 5px 0px;
+  margin: 5px;
+  border-radius: 15px;
+  width: 25%;
+  font-size: 12px;
+  text-align: center;
+}
+.contact-form button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 1px solid wheat;
+}
+.contact-form button:active {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  background-color: burlywood;
+  height: 20%;
+  width: 100%;
+  color: brown;
+  padding-top: 30px;
+  flex-grow: 1;
+  box-shadow: -1px 0px 7px 0px rgb(0, 0, 0);
+}
+footer div h4 {
+  font-size: 25px;
+  padding: 10px;
+  font-weight: bold;
+}
+footer div a {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.redes a {
+  color: brown;
+  padding: 5px;
+}
+.redes a:hover {
+  color: wheat;
+}
+
+.firma {
+  margin-top: 50px;
+}
+.firma h5 {
+  font-size: 15px;
 }
 
 @media (min-width: 640px) {
@@ -297,6 +417,58 @@ main {
 @media (max-width: 640px) {
   .mi-navbar {
     display: none;
+  }
+  .baturi {
+    font-size: 6em;
+  }
+  .subtitulo {
+    font-size: 2em;
+    color: whitesmoke;
+  }
+  .portada-button {
+    width: 30%;
+  }
+  .cuerpo {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  .tarjeta {
+    display: grid;
+    grid-template-areas: "g3 g3" "g3 g3" "g1 g1" "g2 g2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 40%;
+    border-radius: 20px;
+    margin: 20px;
+    width: 80%;
+    height: 633px;
+    font-size: 32px;
+  }
+  .tarjeta .g3 {
+    background-image: url(Multimedia/malthouse.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  .tarjeta .g1 {
+    padding: 20px;
+    font-size: 1em;
+  }
+  .tarjeta .g2 {
+    padding: 15px;
+    font-size: 0.6em;
+  }
+  .contact-form {
+    margin-bottom: 120px;
+    width: 80%;
+  }
+  .contact-form button {
+    padding: 5px 0px 5px 0px;
+    width: 25%;
+    font-size: 12px;
   }
 }
 
