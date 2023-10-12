@@ -120,6 +120,7 @@ video{
     font-size:10em;
     color: wheat;
     font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .subtitulo{
@@ -127,6 +128,7 @@ video{
     position:relative;
     font-size: 3em;
     color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .portada-button:hover{
@@ -149,20 +151,63 @@ video{
     text-wrap: nowrap;
 }
 
-
-
-.grid-main{
-    grid-template-areas:
-    "g1"
-    "g2";
+.portada-about{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    background-image: url(Multimedia/dreamteam.png);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center 40%;
+        span{
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.384);
+            height: 100%;
+            width: 100%;
+                h2{
+                    padding: 0px 50px 0px 50px;
+                    font-size:2.5em;
+                    color: wheat;
+                    font-weight: bold;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                    width: 100%;
+                    text-align: center;
+                    }
+            }        
 }
 
-.cuerpo{
+.cuerpo-index{
     background-color:antiquewhite;
-    height:100vh;
+    height:2000px;
     overflow: auto;
     width: 100%;
-    padding-top: 50px;
+    padding: 50px 150px 50px 150px;
+}
+
+.cuerpo-about{
+    background-color:antiquewhite;
+    height:5000px;
+    overflow: auto;
+    width: 100%;
+    padding: 50px 150px 50px 150px;
+}
+
+.about{
+    margin: 100px;
+    width: 1200px;
+    font-size: 25px;
+}
+
+.the-project{
+    width: 1000px;
+        h3{
+            font-size: 2.5em;
+        }
+        p{
+            font-size: 1.5em;
+            padding: 50px 100px 50px 100px;
+        }
 }
 
 .tarjeta-left {
@@ -174,17 +219,13 @@ video{
     grid-template-rows:25% 75%;
     border-radius: 20px;
     margin: 20px;
-    margin-right: 35%;
-    width: 60%;
+    margin-right: 350px;
+    width: 1000px;
     background-color: beige;
     height: 422px;
     font-size: 32px;
 
     .g3{
-        background-image: url(Multimedia/malthouse.jpg);
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position: center center;
         border-bottom-left-radius: 20px;
         border-top-left-radius: 20px;
     }
@@ -207,16 +248,12 @@ video{
     grid-template-rows:25% 75%;
     border-radius: 20px;
     margin: 20px;
-    margin-left: 35%;
-    width: 60%;
+    margin-left: 350px;
+    width: 1000px;
     background-color: beige;
     height: 422px;
     font-size: 32px;
     .g3{
-        background-image: url(Multimedia/malthouse.jpg);
-        background-size:cover;
-        background-repeat: no-repeat;
-        background-position: center center;
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
     }
@@ -230,12 +267,29 @@ video{
     }
 }
 
+.tarjeta-img-left{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.tarjeta-img-right{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
 .titulo{
     margin-top: 80px;
     padding-top: 40px;
     margin-bottom: 80px;
     padding-bottom: 40px;
-    width: 80%;
+    width: 1000px;
     border-top: 1px solid brown;
     border-bottom: 1px solid brown;
     text-align: center;
@@ -243,8 +297,8 @@ video{
 
 .contact-form{
     margin: 30px;
-    width: 40%;
-    padding: 30px;
+    width: 800px;
+    padding: 40px;
     background-color:rgb(168, 125, 94);
     border-radius: 15px;
     box-shadow: -1px 2px 2px 1px rgba(0,0,0,0.2);
@@ -286,9 +340,57 @@ video{
         }
 }
 
+.form-title{
+    text-align: center;
+    width: 1000px;
+}
+
+.team{
+    display: grid;
+    grid-template-areas: 
+    "g1 g1"
+    "g2 g3";
+    grid-template-columns: 50% 50%;
+    padding: 50px 0px 50px 0px;
+    border-top: 1px solid brown;
+    border-bottom: 1px solid brown;
+    margin: 100px 0px 100px 0px;
+    gap: 100px;
+    width: 1200px;
+        .g1{
+            text-align: center;
+            font-size: 40px;
+            color: brown;
+            font-weight: bold;
+        }
+        .g2{
+            text-align: center;
+            padding-left: 300px; 
+                p{
+                    margin: 20px;
+                    font-size: 25px;
+                }
+        }
+        .g3{
+            text-align: center;
+            padding-right: 300px;
+                p{
+                    margin: 20px;
+                    font-size: 25px;
+                }
+        }
+}
+
+.team-img{
+    width: 300px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 footer {
     background-color:burlywood;
-    height: 20%;
+    height: 100%;
     width: 100%;
     color:brown;
     padding-top: 30px;
@@ -327,22 +429,18 @@ footer {
 }
 
 @media (min-width:640px) {
-    .bootstrap-navbar{
-        display: none;
-    }
 }
-
 @media (max-width:640px) {
-    .mi-navbar{
-        display: none;
-    }
+
     .baturi{
         font-size:6em;
+        width: 90%;
     }
     
     .subtitulo{
         font-size: 2em;
         color: whitesmoke;
+        width: 90%;
     }
     .portada-button{
         width: 30%;
@@ -353,8 +451,10 @@ footer {
         height: 100%;
         width: 100%;
         align-items: center;
+        padding: 50px 5px 50px 5px;
     }
-    .tarjeta{
+
+    .tarjeta-left{
         display: grid;
         grid-template-areas:
         "g3 g3"
@@ -362,20 +462,16 @@ footer {
         "g1 g1"
         "g2 g2";
         grid-template-columns: 50% 50%;
-        grid-template-rows:20% 20% 20% 40%;
+        grid-template-rows:20% 20% 10% 50%;
         border-radius: 20px;
         margin: 20px;
-        width: 80%;
-        height: 633px;
+        width: 90%;
+        height: 844px;
         font-size: 32px;
         .g3{
-            background-image: url(Multimedia/malthouse.jpg);
-            background-size:cover;
-            background-repeat: no-repeat;
-            background-position: center center;
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
-
+            border-bottom-left-radius: 0px;
         }
         .g1{
             padding: 20px;
@@ -388,21 +484,115 @@ footer {
         
         }
     }
+
+    .tarjeta-right{
+        display: grid;
+        grid-template-areas:
+        "g3 g3"
+        "g3 g3"
+        "g1 g1"
+        "g2 g2";
+        grid-template-columns: 50% 50%;
+        grid-template-rows:20% 20% 10% 50%;
+        border-radius: 20px;
+        margin: 20px;
+        width: 90%;
+        height: 844px;
+        font-size: 30px;
+        .g3{
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 0px;
+        }
+        .g1{
+            padding: 20px;
+            font-size: 1em;
+
+        }
+        .g2{
+            padding: 15px;
+            font-size: 0.6em;
+        
+        }
+    }
+
+    .tarjeta-img-left{
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .tarjeta-img-right{
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .titulo{
+        width: 80%;
+    }
+
     .contact-form{
         margin-bottom: 120px;
         width: 80%;
             button{
                 padding: 5px 0px 5px 0px;
-                width: 25%;
+                width: 100px;
                 font-size: 12px;
             }
     }
+    .team{
+        display: grid;
+        grid-template-areas: 
+        "g1"
+        "g2"
+        "g3";
+        grid-template-columns: 100%;
+        width: 90%;
+            .g2{
+                padding-left: 0px;
+            }
+            .g3{
+                padding-right: 0px;
+            }
+    }
+    .team-img{
+        width: 250px;
+        height: 275px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .the-project{
+        width: 90%;
+            h3{
+                font-size: 2em;
+                padding: 0px 25px 0px 25px;
+            }
+            p{
+                font-size: 1em;
+                padding: 50px 50px 50px 50px;
+            }
+        }
+    .about{
+        margin: 100px 0px 100px 0px;
+        width: 80%;
+        font-size: 20px;
+    }
+    .form-title{
+        text-align: center;
+        width: 90%;
+    }
 }
 
-@media (min-width:641px) and (max-width:1007px) {
+
+@media (min-width:641px) and (max-width:1600px) {
+    .contact-form{
+        width: 400px;
+    }
+    .titulo{
+        width: 600px;
+    }
 }
 
-@media (min-width:1008px) {
+@media (min-width:1601px) {
 }
-
-
